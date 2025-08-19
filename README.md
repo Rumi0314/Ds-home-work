@@ -1,18 +1,21 @@
 Date:19-8-25
-Task:2(a)
-
+Task:2(b)
 #include <stdio.h>
+
+int fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
 int main() {
-    int n, t1 = 0, t2 = 1, nextTerm;
+    int n;
     printf("Enter the number of terms: ");
     scanf("%d", &n);
 
     printf("Fibonacci Series: ");
-    for (int i = 1; i <= n; ++i) {
-        printf("%d ", t1);
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
+    for (int i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
     }
     return 0;
 }
