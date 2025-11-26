@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int arr[] = {1, 4, 7, 8, 10};
+    int n = 5;
+    int i, even , odd ;
+
+    for(i=0; i<n; i++)
+{
+        if(arr[i] % 2 == 0)
+            even++;
+        else
+            odd++;
+    }
+
+    printf("Even count = %d\n", even);
+    printf("Odd count = %d\n", odd);
+}
